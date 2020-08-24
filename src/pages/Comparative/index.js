@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {ScrollView, Alert, Image} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, Alert, Image} from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
 import {Container, TextTitle, BoxButton, BoxResult, TextResult} from './styles';
 
@@ -60,6 +60,7 @@ function Comparative() {
 
     return (
         <Container>
+            <KeyboardAvoidingView style={{flex : 1}}>
             <ScrollView style={{flex: 1}}>
                 <Form ref={formRef} onSubmit={handleSubmit}>
                     <TextTitle>Preço do Etanol</TextTitle>
@@ -71,7 +72,7 @@ function Comparative() {
                         }}
                         options={{
                             precision: 2,
-                            separator: ',',
+                            separator: '.',
                             delimiter: '.',
                             unit: 'R$',
                             suffixUnit: '',
@@ -97,7 +98,7 @@ function Comparative() {
                         }}
                         options={{
                             precision: 2,
-                            separator: ',',
+                            separator: '.',
                             delimiter: '.',
                             unit: 'R$',
                             suffixUnit: '',
@@ -136,6 +137,7 @@ function Comparative() {
                     )}
                 </BoxResult>                 
             </ScrollView>
+        </KeyboardAvoidingView>
         </Container>
     );
 }

@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import {ScrollView, Alert, Image} from 'react-native';
+import {KeyboardAvoidingView, ScrollView, Alert, Image} from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
 import {Container, TextTitle, BoxButton, BoxResult, TextResult} from './styles';
 
@@ -33,20 +33,24 @@ function Liters() {
             return;
         }
 
-        const value = parseFloat(inputAbastecer) / parseFloat(inputPreco);
+        const value = parseFloat(inputAbastecer.slice(2)) / parseFloat(inputPreco.slice(2));
 
-        setResult(value.toString());
+        const fixedValue = value.toFixed(2);
+       
+        setResult(fixedValue.toString());
 
         setLoading(false);
     }
 
     function handleClear() {
+        setResult();
         setInputAbastecer();
         setInputPreco();
     }
 
     return (
         <Container>
+            <KeyboardAvoidingView style={{flex: 1}}>
             <ScrollView style={{flex: 1}}>
                 <Form ref={formRef} onSubmit={handleSubmit}>
                     <TextTitle>Valor a abastecer</TextTitle>
@@ -58,7 +62,7 @@ function Liters() {
                         }}
                         options={{
                             precision: 2,
-                            separator: ',',
+                            separator: '.',
                             delimiter: '.',
                             unit: 'R$',
                             suffixUnit: '',
@@ -84,7 +88,7 @@ function Liters() {
                         }}
                         options={{
                             precision: 2,
-                            separator: ',',
+                            separator: '.',
                             delimiter: '.',
                             unit: 'R$',
                             suffixUnit: '',
@@ -111,12 +115,13 @@ function Liters() {
                 <BoxResult>                    
                     {result !== undefined && (
                         <>
-                            <TextResult>Quantidade de litros: </TextResult>
-                            <TextResult>{{result}}</TextResult>
+                            <TextResult>Quantidade em litros: </TextResult>
+                            <TextResult>{result} litros</TextResult>
                         </>
                     )}
                 </BoxResult>                 
             </ScrollView>
+        </KeyboardAvoidingView>
         </Container>
     );
 }
