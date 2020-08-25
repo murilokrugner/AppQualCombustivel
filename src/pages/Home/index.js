@@ -3,7 +3,11 @@ import {Image} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import { useNavigation } from '@react-navigation/native';
 
-import { Container, Box, BoxItem, BoxButton, Description } from './styles'
+import { Container, Box, BoxItem, BoxButton, Description, BoxAds } from './styles'
+
+import {
+    AdMobBanner,
+  } from 'react-native-admob'
 
 import Gas from '../../assets/gas.png';
 import Car from '../../assets/car.png';
@@ -57,6 +61,12 @@ function Home() {
                     </BoxButton>
                 </BoxItem>
             </Box>
+            <BoxAds>
+                <AdMobBanner
+                    adSize="largeBanner"
+                    adUnitID="ca-app-pub-3940256099942544/6300978111"                                
+                />
+            </BoxAds>
         </Container>
     )
 }

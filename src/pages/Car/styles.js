@@ -38,3 +38,5 @@ export const TextResult = styled.Text`
     font-size: 18px;
     font-weight: bold;
 `;
+
+export const BoxAds = styled.View``;

@@ -1,12 +1,16 @@
 import React, {useRef, useState} from 'react';
 import {KeyboardAvoidingView, ScrollView, Alert} from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
-import {Container, TextTitle, BoxButton, BoxResult, TextResult} from './styles';
+import {Container, TextTitle, BoxButton, BoxResult, TextResult, BoxAds} from './styles';
 
 import Button from '../../components/Button';
 
 import { Form } from '@unform/mobile';
 import { FormHandles } from '@unform/core';
+
+import {
+    AdMobBanner,
+  } from 'react-native-admob'
 
 function Money() {
     const formRef = useRef(null);
@@ -45,8 +49,6 @@ function Money() {
 
         const resultValue = resultLitro * parseFloat(inputPreco.slice(2));
 
-        console.log(resultValue);
-
         setResult(resultLitro.toString());
         setResult2(resultValue.toString());
        
@@ -54,6 +56,7 @@ function Money() {
     }
 
     function handleClear() {
+        setResult();
         setInputLitro();
         setInputPercorrer();
         setInputPreco();
@@ -143,7 +146,13 @@ function Money() {
                             
                         </>
                     )}
-                </BoxResult>                 
+                </BoxResult>
+                <BoxAds style={result !==undefined && {marginTop: 30}}>
+                    <AdMobBanner
+                        adSize="largeBanner"
+                        adUnitID="ca-app-pub-3940256099942544/6300978111"                                
+                    />
+                </BoxAds>                 
             </ScrollView>
             </KeyboardAvoidingView>
         </Container>
