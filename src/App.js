@@ -1,8 +1,7 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import codePush from 'react-native-code-push';
-
 import {StatusBar, View} from 'react-native';
+import codePush from 'react-native-code-push';
 
 import {NavigationContainer} from '@react-navigation/native';
 import Routes from './routes';
