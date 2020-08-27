@@ -9,10 +9,10 @@ import {
     AdMobBanner,
   } from 'react-native-admob'
 
-import Gas from '../../assets/gas.png';
-import Car from '../../assets/car.png';
-import Liter from '../../assets/liter.png';
-import Money from '../../assets/money.png';
+import Gas from '../../assets/gas.jpg';
+import Car from '../../assets/car.jpg';
+import Liter from '../../assets/liter.jpg';
+import Money from '../../assets/money.jpg';
 
 function Home() {
     const {navigate} = useNavigation();

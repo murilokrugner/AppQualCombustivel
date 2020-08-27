@@ -3,8 +3,8 @@ import {KeyboardAvoidingView, ScrollView, Alert, Image} from 'react-native';
 import { TextInputMask } from 'react-native-masked-text'
 import {Container, TextTitle, BoxButton, BoxResult, TextResult, BoxAds} from './styles';
 
-import Etanol from '../../assets/etanol.png';
-import Gasolina from '../../assets/gasolina.png';
+import Etanol from '../../assets/etanol.jpg';
+import Gasolina from '../../assets/gasolina.jpg';
 
 import Button from '../../components/Button';
 
