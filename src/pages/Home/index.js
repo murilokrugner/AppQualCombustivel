@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import { Container, Box, BoxItem, BoxButton, Description, BoxAds } from './styles'
 
 import {
-    AdMobBanner,
+    AdMobBanner    
   } from 'react-native-admob'
 
 import Gas from '../../assets/gas.jpg';
@@ -63,6 +63,7 @@ function Home() {
             </Box>
             <BoxAds>
                 <AdMobBanner
+                    
                     adSize="largeBanner"
                     adUnitID="ca-app-pub-2776609991840638/2937855696"                                
                 />
