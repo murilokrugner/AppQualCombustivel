@@ -4,8 +4,10 @@ export const Container = styled.View`
     flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 20px;
+
+    padding: 20px;
 `;
 
 export const TextTitle = styled.Text`

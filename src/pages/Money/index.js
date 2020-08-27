@@ -49,14 +49,18 @@ function Money() {
 
         const resultValue = resultLitro * parseFloat(inputPreco.slice(2));
 
-        setResult(resultLitro.toString());
-        setResult2(resultValue.toString());
+        const fixedValueLt = resultLitro.toFixed(2);
+        const fixedValue = resultValue.toFixed(2);
+
+        setResult(fixedValueLt.toString());
+        setResult2(fixedValue.toString());
        
         setLoading(false);
     }
 
     function handleClear() {
         setResult();
+        setResult2();
         setInputLitro();
         setInputPercorrer();
         setInputPreco();
@@ -137,16 +141,15 @@ function Money() {
                         <Button onPress={handleClear} style={{width: 300}}>Limpar</Button>
                     </BoxButton>
                 </Form>  
-
                 <BoxResult>                    
                     {result !== undefined && (
                         <>
-                            <TextResult>Você irá precisar de: {result}Lts de combustível e </TextResult>
-                            <TextResult>irá gastar R$ {result2} reais</TextResult>
-                            
+                            <TextResult>Você irá precisar de: {result}Lts </TextResult>
+                            <TextResult>de combustível e</TextResult>
+                            <TextResult>irá gastar R$ {result2} reais</TextResult>                            
                         </>
                     )}
-                </BoxResult>
+                </BoxResult>                
                 <BoxAds style={result !==undefined && {marginTop: 30}}>
                     <AdMobBanner
                         adSize="largeBanner"
