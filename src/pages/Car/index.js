@@ -47,19 +47,24 @@ function Car() {
         if (parseFloat(inputKmInicial) < parseFloat(inputKmFinal)) {
             const resultKm = ((parseFloat(inputKmInicial) - parseFloat(inputKmFinal) * 1) * -1 / parseFloat(inputLitros));
 
-            setResult(resultKm.toString());
+            const fixedValue = resultKm.toFixed(2);
+
+            setResult(fixedValue.toString());
        
             setLoading(false);
         } else {
             const resultKm = ((parseFloat(inputKmInicial) - parseFloat(inputKmFinal)) / parseFloat(inputLitros));
 
-            setResult(resultKm.toString());
+            const fixedValue = resultKm.toFixed(2);
+
+            setResult(fixedValue.toString());
        
             setLoading(false);
         }           
     }
 
     function handleClear() {
+        setResult();
         setInputKmInicial();
         setInputKmFinal();
         setInputLitros();
