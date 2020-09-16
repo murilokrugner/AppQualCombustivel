@@ -155,7 +155,7 @@ function Money() {
                         adSize="largeBanner"
                         adUnitID="ca-app-pub-2776609991840638/2937855696"                                
                     />
-                </BoxAds>                 
+                    </BoxAds>               
             </ScrollView>
             </KeyboardAvoidingView>
         </Container>
