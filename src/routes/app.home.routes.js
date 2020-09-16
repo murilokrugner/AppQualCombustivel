@@ -18,6 +18,7 @@ export default HomeRoutes = () => (
             headerStyle: {
             },
             headerShown: true,
+            cardStyle: { backgroundColor: '#fff' },
         }}
         initialRouteName="Home">
         <Homepage.Screen name="Home" component={Home} 
