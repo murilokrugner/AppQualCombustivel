@@ -150,7 +150,7 @@ function Car() {
                 <BoxAds style={result !==undefined && {marginTop: 30}}>
                     <AdMobBanner
                         adSize="largeBanner"
-                        adUnitID="ca-app-pub-2776609991840638/2937855696"                                
+                        adUnitID="ca-app-pub-4499612911905101/5535264373"                                
                     />
                     </BoxAds>              
             </ScrollView>
