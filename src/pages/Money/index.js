@@ -149,14 +149,14 @@ function Money() {
                             <TextResult>irá gastar R$ {result2} reais</TextResult>                            
                         </>
                     )}
-                </BoxResult>                
-                <BoxAds style={result !==undefined && {marginTop: 30}}>
+                </BoxResult>                                               
+            </ScrollView>
+            <BoxAds style={result !==undefined && {marginTop: 30}}>
                     <AdMobBanner
                         adSize="largeBanner"
                         adUnitID="ca-app-pub-4499612911905101/5535264373"                                
                     />
-                    </BoxAds>               
-            </ScrollView>
+                    </BoxAds>
             </KeyboardAvoidingView>
         </Container>
     );

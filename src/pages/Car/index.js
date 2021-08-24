@@ -146,14 +146,14 @@ function Car() {
                             
                         </>
                     )}
-                </BoxResult> 
+                </BoxResult>                             
+            </ScrollView>
                 <BoxAds style={result !==undefined && {marginTop: 30}}>
                     <AdMobBanner
                         adSize="largeBanner"
                          adUnitID="ca-app-pub-4499612911905101/5535264373"                                 
                     />
-                    </BoxAds>              
-            </ScrollView>
+                </BoxAds>  
             </KeyboardAvoidingView>
         </Container>
     );

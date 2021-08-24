@@ -139,14 +139,14 @@ function Comparative() {
                         <Image style={{marginTop: 20}} source={Gasolina} />
                         </>
                     )}
-                </BoxResult>  
-                <BoxAds>
+                </BoxResult>                               
+            </ScrollView>
+            <BoxAds>
                     <AdMobBanner
                         adSize="largeBanner"
                          adUnitID="ca-app-pub-4499612911905101/5535264373"                                 
                     />
-                </BoxAds>             
-            </ScrollView>
+                </BoxAds>
         </KeyboardAvoidingView>
         </Container>
     );
