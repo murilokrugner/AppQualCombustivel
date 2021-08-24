@@ -143,7 +143,7 @@ function Comparative() {
                 <BoxAds>
                     <AdMobBanner
                         adSize="largeBanner"
-                        adUnitID="ca-app-pub-4499612911905101/5535264373"                                
+                         adUnitID="ca-app-pub-4499612911905101/5535264373"                                 
                     />
                 </BoxAds>             
             </ScrollView>

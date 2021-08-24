@@ -56,6 +56,6 @@ export const Description = styled.Text`
 `;
 
 export const BoxAds = styled.View`
-    margin-top: 220px;
+    margin-top: 170px;
 
 `;
